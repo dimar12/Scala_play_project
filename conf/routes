@@ -1,8 +1,8 @@
 # Routes
 
 GET     /                           controllers.TeacherController.getTeachers
-POST    /                           controllers.TeacherController.addTeacher
-
+POST    /addTeacher                 controllers.TeacherController.addTeacher
+GET     /AddTeacherPage             controllers.TeacherController.AddTeacherPage
 
 
 

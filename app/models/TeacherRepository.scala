@@ -14,8 +14,8 @@ class TeacherRepository @Inject()(val provider: DatabaseConfigProvider) extends 
   
   def findAll() = db.run(teachers.result)
   
-  def insert(teacher: Teacher) = db
-    .run(teachers returning teachers.map(_.id) += teacher)
-    .map(id => teacher.copy(id = Some(id)))
+  def insert(user: Teacher) = db
+    .run(teachers returning teachers.map(_.id) += user)
+    .map(id => user.copy(id = Some(id)))
 
 }

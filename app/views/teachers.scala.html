@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Manage Users</title>
+        <title>Manage Teachers</title>
         <meta charset="utf-8">
   		<meta name="viewport" content="width=device-width, initial-scale=1">
   		<link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
@@ -13,23 +13,14 @@
         <script src="@routes.Assets.versioned("lib/bootstrap/js/bootstrap.min.js")" type="text/javascript"></script>
     </head>
     <body>
+		<header class="topbar">
+			<h1 class="fill" id="header-title">
+				<a href="@routes.TeacherController.AddTeacherPage()">
+					Add new teacher
+				</a>
+			</h1>
+		</header>
     	<div class="container">
-    		<div class="panel">
-    			@if(teacherForm.hasGlobalErrors) {
-				  @for(error <- teacherForm.globalErrors) {
-					  <div class="alert alert-danger" role="alert">
-	  					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-	  					@Messages(error.messages, error.args)
-					  </div>  
-				  }
-				}
-				@helper.form(action = routes.TeacherController.addTeacher()) {
-				    @helper.inputText(teacherForm("email"), '_label -> "Email Address")
-				    @helper.inputText(teacherForm("name"), '_label -> "Name")
-				    @helper.inputText(teacherForm("phone"), '_label -> "Phone")
-				    <button class="btn btn-default" type="submit">Add Teacher</button>
-				}			
-			</div>
 		    <div class="panel panel-default">
 			 	<div class="panel-heading">Teachers</div>
 			  	<table class="table">
