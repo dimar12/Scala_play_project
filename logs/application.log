@@ -1,0 +1,4 @@
+2021-01-10 21:24:32,821 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2021-01-10 21:24:32,959 [INFO] from play.api.Play in ForkJoinPool-1-worker-2 - Application started (Dev)
+2021-01-10 21:24:33,467 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 - HikariCP pool db is starting.
+2021-01-10 21:25:03,974 [INFO] from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-12 - HikariCP pool db is shutting down.
